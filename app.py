@@ -67,6 +67,6 @@ def demo(filename):
     return send_from_directory(demo_dir, filename + '.html')
 
 if __name__ == '__main__':
-    # El puerto 5000 es estándar para el desarrollo con Flask.
-    # debug=True activa la recarga automática en cambios.
+    # Esta sección solo se ejecuta al correr el script directamente (ej. `python app.py`)
+    # Es útil para desarrollo local, pero no debe ejecutarse en producción con mod_wsgi.
     app.run(debug=True, port=5000)
