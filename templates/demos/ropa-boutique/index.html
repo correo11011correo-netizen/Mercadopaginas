@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique de Moda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent-color: #e83e8c; }
+        body { font-family: 'Lato', sans-serif; background-color: #0d1117; color: #c9d1d9; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', sans-serif; }
+        .navbar-brand, .accent-text { color: var(--accent-color) !important; }
+        .btn-primary { background-color: var(--accent-color); border-color: var(--accent-color); }
+        .btn-outline-primary { border-color: var(--accent-color); color: var(--accent-color); }
+        .btn-outline-primary:hover { background-color: var(--accent-color); color: #fff; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?fashion boutique') no-repeat center center; background-size: cover; padding: 6rem 1rem; }
+        .section-title { border-bottom: 2px solid var(--accent-color); display: inline-block; padding-bottom: 0.5rem; }
+        .service-card { background-color: #161b22; border: 1px solid #30363d; transition: transform 0.2s; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 3rem; color: var(--accent-color); }
+        footer { border-top: 1px solid #30363d; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-4" href="#">Boutique de Moda</a>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero text-white text-center">
+        <div class="container">
+            <h1 class="display-3">Estilo que Define</h1>
+            <p class="lead">Descubre las últimas tendencias y expresa tu personalidad.</p>
+            <a href="#contact" class="btn btn-primary btn-lg mt-3">Contáctanos</a>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section id="services" class="my-5 py-5">
+            <h2 class="text-center mb-5 section-title">Nuestros Servicios</h2>
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <div class="service-card p-4">
+                        <i class="bi bi-gem service-icon mb-3"></i>
+                        <h3>Colecciones Exclusivas</h3>
+                        <p>Piezas únicas seleccionadas por nuestros expertos en moda.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card p-4">
+                        <i class="bi bi-truck service-icon mb-3"></i>
+                        <h3>Envío Rápido</h3>
+                        <p>Recibe tus compras en la puerta de tu casa en tiempo récord.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card p-4">
+                        <i class="bi bi-person-heart service-icon mb-3"></i>
+                        <h3>Asesoría de Estilo</h3>
+                        <p>Te ayudamos a encontrar el look perfecto para cada ocasión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="my-5 py-5 bg-dark rounded p-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="section-title mb-4">Sobre Nosotros</h2>
+                    <p>Creemos que la moda es una forma de arte. Nuestra misión es ofrecerte prendas que te hagan sentir increíble.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                     <img src="https://source.unsplash.com/800x600/?fashion boutique,team" class="img-fluid rounded" alt="Equipo de Boutique de Moda">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="my-5 py-5">
+            <h2 class="text-center mb-5 section-title">Ponte en Contacto</h2>
+            <p class="text-center w-75 mx-auto">Visita nuestra tienda o contáctanos para una sesión de estilismo personalizada.</p>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary btn-lg">Enviar Mensaje</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-4">
+        <p>Sitio Demo para Boutique de Moda | <a href="http://www.mercadopaginas.com" class="text-white">Creado por MercadoPaginas</a></p>
+    </footer>
+</body>
+</html>
