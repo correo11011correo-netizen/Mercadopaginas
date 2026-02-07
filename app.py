@@ -19,24 +19,27 @@ WEBSITE_DATA = {
             'id': 1,
             'name': 'Automóviles',
             'websites': [
-                {'id': 1, 'name': 'Blog de Autos', 'description': 'Un blog para entusiastas de los coches.', 'price': 100, 'demo_url': 'auto-blog/index'},
-                {'id': 2, 'name': 'Clasificados de Autos', 'description': 'Compra y vende coches usados.', 'price': 150, 'demo_url': 'auto-clasificados/index'},
+                {'id': 1, 'name': 'Blog de Autos', 'description': 'Un blog moderno y dinámico para entusiastas de los coches, con reseñas, noticias y guías.', 'price': 125, 'demo_url': 'auto-blog/index', 'image_id': 'auto-blog'},
+                {'id': 2, 'name': 'Clasificados de Autos', 'description': 'Plataforma completa para comprar y vender coches usados, con filtros y perfiles de usuario.', 'price': 170, 'demo_url': 'auto-clasificados/index', 'image_id': 'auto-clasificados'},
+                {'id': 7, 'name': 'Taller Mecánico', 'description': 'Web profesional para talleres, ideal para mostrar servicios, horarios y agendar citas online.', 'price': 150, 'demo_url': 'auto-taller/index', 'image_id': 'auto-taller'},
             ]
         },
         {
             'id': 2,
             'name': 'Inmobiliaria',
             'websites': [
-                {'id': 3, 'name': 'Agente Inmobiliario', 'description': 'Sitio web para agentes de bienes raíces.', 'price': 120, 'demo_url': 'inmo-agente/index'},
-                {'id': 4, 'name': 'Propiedades de Lujo', 'description': 'Catálogo de propiedades exclusivas.', 'price': 200, 'demo_url': 'inmo-pro/index'},
+                {'id': 3, 'name': 'Agente Inmobiliario', 'description': 'Sitio web personal para agentes, perfecto para destacar propiedades y captar nuevos clientes.', 'price': 140, 'demo_url': 'inmo-agente/index', 'image_id': 'inmo-agente'},
+                {'id': 4, 'name': 'Propiedades de Lujo', 'description': 'Catálogo online de alta gama para propiedades exclusivas, con galerías de fotos y mapas.', 'price': 220, 'demo_url': 'inmo-pro/index', 'image_id': 'inmo-pro'},
+                {'id': 8, 'name': 'Alquiler Vacacional', 'description': 'Página de aterrizaje atractiva para promocionar y reservar propiedades de alquiler turístico.', 'price': 160, 'demo_url': 'inmo-vacacional/index', 'image_id': 'inmo-vacacional'},
             ]
         },
         {
             'id': 3,
             'name': 'Tiendas',
             'websites': [
-                {'id': 5, 'name': 'Tienda de Barrio', 'description': 'E-commerce para pequeños negocios.', 'price': 180, 'demo_url': 'tienda-barrio/index'},
-                {'id': 6, 'name': 'Boutique de Ropa', 'description': 'Tienda online para marcas de moda.', 'price': 250, 'demo_url': 'ropa-boutique/index'},
+                {'id': 5, 'name': 'Tienda de Barrio', 'description': 'E-commerce funcional para pequeños negocios que quieran vender sus productos en línea.', 'price': 190, 'demo_url': 'tienda-barrio/index', 'image_id': 'tienda-barrio'},
+                {'id': 6, 'name': 'Boutique de Ropa', 'description': 'Tienda online elegante para marcas de moda, con enfoque en el producto y la estética visual.', 'price': 260, 'demo_url': 'ropa-boutique/index', 'image_id': 'ropa-boutique'},
+                {'id': 9, 'name': 'Blog de Moda', 'description': 'Un espacio para crear contenido, mostrar tendencias y construir una comunidad de seguidores.', 'price': 130, 'demo_url': 'ropa-blog/index', 'image_id': 'ropa-blog'},
             ]
         }
     ]

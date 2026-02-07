@@ -1,81 +1,144 @@
+/* --- VARIABLES & GLOBAL STYLES --- */
+:root {
+    --bg-color: #0d1117;
+    --primary-glass: rgba(22, 27, 34, 0.6);
+    --secondary-glass: rgba(35, 42, 51, 0.5);
+    --border-color: rgba(139, 148, 158, 0.3);
+    --text-color: #c9d1d9;
+    --accent-color: #58a6ff;
+    --success-color: #28a745;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap');
+
 body {
-    background-color: #0d1117;
-    color: #c9d1d9;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
+/* --- ANIMATED GRADIENT BACKGROUND --- */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+    background: linear-gradient(-45deg, #0d1117, #1f2937, #374151, #0d1117);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+.hero-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.hero-section .lead {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.accent-text {
+    color: var(--accent-color);
+}
+
+/* --- NAVBAR --- */
 .navbar {
-    border-bottom: 1px solid #30363d;
+    background-color: var(--primary-glass) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
-/* --- Filter Buttons --- */
+/* --- FILTER CONTROLS --- */
 .filter-controls .btn {
-    border-color: #30363d;
-    margin: 0 5px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
 }
-.filter-controls .btn.active {
-    background-color: #58a6ff;
-    color: #0d1117 !important;
-    border-color: #58a6ff;
-}
-
-/* --- Modern Cards --- */
-.website-card {
-    background-color: #161b22 !important;
-    border: 1px solid #30363d;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; 
+.filter-controls .btn.active, .filter-controls .btn:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color) !important;
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
 }
 
-.website-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.website-card .card-img-container {
-    overflow: hidden;
-    position: relative;
-}
-
-.website-card .card-img-top {
-    transition: transform 0.3s ease;
-}
-
-.website-card .card-img-overlay {
-    background: rgba(0,0,0,0.6);
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.website-card:hover .card-img-overlay {
-    opacity: 1;
-}
-
-.card-title {
-    color: #58a6ff;
-}
-
-.card-footer {
-    background-color: #161b22 !important;
-    border-top: 1px solid #30363d;
-    padding: 0.75rem;
-}
-
-.border-bottom {
-    border-bottom: 1px solid #30363d !important;
-}
-
-/* --- Category Section Styling --- */
+/* --- CATEGORY SECTION --- */
 section[id^="category-"] {
-    background-color: #161b22;
-    border: 1px solid #30363d;
-    margin-bottom: 3rem;
+    background-color: transparent;
+    border: none;
 }
 section[id^="category-"] h2 {
-    color: #58a6ff; /* Accent color for category titles */
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
-/* --- Modal --- */
+/* --- GLASSMORPHISM CARDS --- */
+.website-card {
+    background-color: var(--primary-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+.website-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-color: rgba(88, 166, 255, 0.5);
+}
+.website-card .card-img-container {
+    overflow: hidden;
+}
+.website-card .card-img-top {
+    transition: transform 0.4s ease;
+}
+.website-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+.card-body {
+    z-index: 2;
+}
+.card-title {
+    color: var(--accent-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.card-text.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--success-color);
+}
+.card-footer {
+    background-color: var(--secondary-glass);
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- MODAL --- */
+.modal-content {
+    background-color: var(--primary-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+}
 .modal-xl {
     max-width: 95%;
 }
@@ -86,4 +149,5 @@ section[id^="category-"] h2 {
     width: 100%;
     height: 80vh; 
     border: none;
+    border-radius: 0 0 0.25rem 0.25rem;
 }

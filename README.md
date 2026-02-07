@@ -79,10 +79,40 @@ El último paso es asegurar tu sitio con un certificado SSL gratuito.
 
 ---
 
-## Ejecución para Desarrollo Local
+## Modificación y Desarrollo Local
 
-1.  **Clona el repositorio:** `git clone ...`
-2.  **Crea un entorno virtual:** `python3 -m venv .venv && source .venv/bin/activate`
-3.  **Instala dependencias:** `pip install -r requirements.txt`
-4.  **Ejecuta el servidor de desarrollo:** `python app.py`
-    (La aplicación estará disponible en `http://127.0.0.1:5000`)
+Para realizar cambios o añadir nuevas funcionalidades, sigue estos pasos para configurar un entorno de desarrollo en tu máquina local.
+
+1.  **Clonar el repositorio (si aún no lo has hecho):**
+    ```bash
+    git clone https://github.com/correo11011correo-netizen/Mercadopaginas.git
+    cd Mercadopaginas
+    ```
+
+2.  **Crear y activar un entorno virtual:**
+    Esto aísla las dependencias del proyecto y evita conflictos con otros proyectos de Python.
+    ```bash
+    # Crear el entorno virtual (solo se hace una vez)
+    python3 -m venv .venv
+
+    # Activar el entorno (debes hacerlo cada vez que empieces a trabajar)
+    source .venv/bin/activate
+    ```
+    *Nota: Si estás en Windows, la activación se hace con `.\\.venv\\Scripts\\activate`.*
+
+3.  **Instalar las dependencias:**
+    Con el entorno activado, instala las librerías necesarias.
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Ejecutar el servidor de desarrollo:**
+    El servidor de Flask se recargará automáticamente cada vez que guardes un cambio en los archivos.
+    ```bash
+    python app.py
+    ```
+
+5.  **Visualizar la página:**
+    Abre tu navegador web y visita [http://127.0.0.1:5000](http://127.0.0.1:5000) para ver la aplicación en funcionamiento.
+
+¡Ahora estás listo para modificar el código! Cuando termines, simplemente detén el servidor en la terminal con `Ctrl + C`.
